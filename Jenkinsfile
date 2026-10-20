@@ -25,7 +25,7 @@ pipeline {
                 bat 'git --version'
                 bat 'node --version'
                 bat 'npm --version'
-                bat 'docker --version'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" --version'
             }
         }
 
@@ -49,7 +49,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                bat 'docker build -t %DOCKER_IMAGE%:%BUILD_NUMBER% .'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" build -t %DOCKER_IMAGE%:%BUILD_NUMBER% .'
             }
         }
 
