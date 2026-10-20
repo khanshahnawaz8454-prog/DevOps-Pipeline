@@ -54,10 +54,10 @@ pipeline {
         }
 
         stage('Trivy Security Scan') {
-            steps {
-                bat 'trivy image --exit-code 1 --severity CRITICAL %DOCKER_IMAGE%:%BUILD_NUMBER%'
-            }
-        }
+    steps {
+        bat '"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WinGet\\Links\\trivy.exe" image --exit-code 1 --severity CRITICAL %DOCKER_IMAGE%:%BUILD_NUMBER%'
+    }
+}
     }
 
     post {
